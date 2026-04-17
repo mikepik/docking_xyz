@@ -1,0 +1,6 @@
+runs/
+!runs/.gitkeep
+docking_run_*/
+*.log
+__pycache__/
+*.pyc

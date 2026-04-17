@@ -1,0 +1,52 @@
+# Docking pipeline configuration file
+# -----------------------------------
+
+# Option 1: Download receptor from RCSB
+pdb_id: 3EST
+
+# Option 2 (alternative): Use a pre-prepared receptor instead
+# If this is set, pdb_id is ignored
+# Example: receptor: 2GAT_prepped.pdbqt
+receptor: ""
+
+# Chains to retain during receptor cleanup
+chains: "A"
+
+# Keep cofactors (true/false)
+keep_cofactors: false
+
+# ---------------- Ligands ---------------- #
+
+# Folder containing ligand structure files
+ligand_dir: ligands/
+
+# Combined ligand SDF output (auto-generated)
+combined_sdf: combined_ligands.sdf
+
+# ---------------- Output folders ---------------- #
+
+# These are created inside each run directory
+pdbqt_dir: pdbqt_files/
+results_dir: results/
+
+# ---------------- Docking box ---------------- #
+# Define center using XYZ coordinates from original PDB
+
+center_x: -7.141
+center_y: 26.551
+center_z: 38.452
+
+# Box dimensions (Å)
+size_x: 18
+size_y: 18
+size_z: 18
+
+# ---------------- Vina config ---------------- #
+
+config_out: vina_config.txt
+
+# CPU cores for docking
+cpu: 8
+
+# Number of top ligands to export for ChimeraX
+top_ligands: 5

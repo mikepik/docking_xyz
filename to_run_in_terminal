@@ -1,0 +1,3 @@
+conda activate docking_env
+cd ~/docking
+python3 run_pipeline.py docking_config.yml | tee docking_run.log
